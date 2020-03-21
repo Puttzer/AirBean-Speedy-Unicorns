@@ -23,24 +23,24 @@
 
 export default {
   name: 'Navigation',
-  components: {
+  components: { 
    
   }
 
 }
 </script>
 
-<style lang="scss"  >
+<style scoped lang="scss"  >
 
 body{
-  background-color: white;
+  background-color: rgb(65, 61, 61);
 }
 
 .Nav-Container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15%;
+  margin-top: 10%;
   justify-content: space-around;
 }
 
@@ -52,29 +52,48 @@ body{
 
 
 button {
-    width: 40%;
-    padding: 5px;
-    margin-right: 50px;
-    border: none;
-    text-align: center;
-    border-radius: 10px;
-    color:black;
-    transition: 0.7s;
-    text-decoration: none;
-    font-size: 25px;
-    
-    &:hover {
-      color:white;
-      background: rgb(207, 192, 192);
-      transition: 0.7s;
+    background: transparent;
+    border :none;
+    margin :20px auto 0;
+    display: block;
+    font-size:30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    outline:none;
+    color: white;
+
+    position: relative;
+    transition:0.3s;
+    padding:10px; // the trick
+
+    &:before{
+        content :'';
+        border-bottom :4px solid white;
+        padding: 0 60px;
+        position :absolute;
+        bottom :0;
+        left: 0;
+        right :0;
+        margin :0, auto;
+        width: 0;
+        transition: 0.3s;
+    }
+    &:hover:before{
+        width :100%;
+        padding: 0 ;// the other part of the trick
+    }
+    &:active{
+        background: black;
+        color: white;
+        transition: none;
     
     
     }
-  }
+}
+  
 
 
   .close {
-  position: absolute;
+  position:absolute;
   left: 32px;
   top: 32px;
   width: 40px;
@@ -83,6 +102,7 @@ button {
   border-radius: 50%;
   background: yellow;
 }
+
 .close:hover {
   opacity: 1;
 }

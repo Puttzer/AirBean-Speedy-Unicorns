@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     
-    <Landing msg=" "/>
+    <Landing />
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style lang="scss" >
+<style  lang="scss" >
 body{
   background-color: green;
 }
