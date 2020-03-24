@@ -10,7 +10,11 @@ const routes = [
     name: 'About',
     component: About
   },
-
+  {
+    path: '/meny',
+    name: 'Meny',
+    component: () => import('../views/Meny.vue')
+  },
 ]
 
 const router = new VueRouter({
