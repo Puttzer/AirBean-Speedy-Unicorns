@@ -68,6 +68,7 @@ export default {};
   margin: 0 auto;
   background-color: #f3e4e1;
   background-size: 100%;
+  text-align: center;
 
   &.fixed-footer {
     position: fixed;
