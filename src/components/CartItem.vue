@@ -1,16 +1,18 @@
 <template>
-    <div class="cartitem">
-        <h3 class="cartitemtitle">{{item.title}}<span class="dots"></span></h3>
-        <p class="cartitemtotal">{{ totalamount }} kr </p>
-        <div class="itemvalue">
-            <img class="increse" 
-            src="./../assets/graphics/arrow-up.svg" alt="uparrow" @click="increaseQuantity">
-            <h4 class="count">{{ item.quantity }}</h4>
-            <img class="decrese" src="./../assets/graphics/arrow-down.svg" alt="downarrow"
-            @click="decreaseQuantity">
-        </div>  
+    <div class="cart-item">
+        <div class="titles">
+            <h2>{{item.title}}</h2>
+            <h4>{{totalamount}} kr</h4>
+        </div>
+        <p>............................................................</p>
+        <div class="counter">
+            <img @click="increase" src="@/assets/graphics/arrow-up.svg" >
+                <h3>{{item.quantity}}</h3>
+            <img @click="decrease" src="@/assets/graphics/arrow-down.svg" >
+        </div>
     </div>
 </template>
+
 
 <script>
     export default {
@@ -24,11 +26,11 @@
             }
         },
         methods:{
-            increaseQuantity(){
+            increase(){
                 this.item.quantity++;
 
             },
-            decreaseQuantity(){
+            decrease(){
                  if(this.item.quantity>1){
                      this.item.quantity--;
                  }else{
@@ -41,49 +43,39 @@
 </script>
 
 <style lang="scss">
-.cartitem{
-  display:grid;
-//   max-width:420px;
-  grid-template-columns:1fr 2rem;
-  grid-template-rows:2rem 1.4rem;
-  margin: 1rem 1rem;
-  
-  
-    .cartitemtitle{
-        margin: 0;
-        padding: 0;
-        display:flex;
-        align-items:flex-end;
-        .dots{
-            flex:1;
-            border-bottom:1px dotted black;
-            margin:0 0 .3rem 0;
-        }
-    }
-    .cartitemtotal{
-        display:flex;
-        align-items:flex-start;
-        margin:0;
-    }
-    .itemvalue{
-        grid-column: 2/3;
-        grid-row:1/3;
-        display:flex;
-        flex-direction:column;
+
+    .cart-item {
+        margin: 0 auto;
+        display: flex;
         align-items: center;
-        justify-content:space-between;
-        
-        
-        h4{
-            font-weight:700;
-            margin: .7rem 0 1rem 0;
+        text-align: left;
+        h2 {
+            margin-bottom: 8px;
+            margin-right: 0;
+            white-space: nowrap;
         }
-        
-        .increse .decrese{
-            margin: .25rem;
-            
+        h4 {
+            margin-top: 0;
+            font-weight: 100;
+        }
+        p {
+            margin: 0 20px 20px 5px;
+            overflow: hidden;
+        }
+        .counter {
+            margin: 0 0 10px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                cursor: pointer;
+                height: 8px;
+            }
+            h3 {
+                margin: 8px 0;
+            }
         }
     }
-}
 
 </style>
