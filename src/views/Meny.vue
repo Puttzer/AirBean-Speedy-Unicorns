@@ -3,19 +3,18 @@
   
     <section class="upp">
   
-      <button @click="openMenu" class="menu-btn">
+      <button class="menu-btn">
         <img src="../assets/graphics/navicon.svg" />
       </button>
+    
+        <CartIcon />
 
-      <button @click="openCart" class="cart-btn">
-        <img src="../assets/graphics/bag.svg" />
-      </button>
     </section>
     <h1>Meny</h1>
     <section class="products">
       <ul>
         <li v-for="item in menu" :key="item.id"  :item="item">
-          <button @click="additem()" class="add-btn">
+          <button @click="additem(item)" class="add-btn">
             <img src="../assets/graphics/add.svg" />
           </button>
           {{ item.title }}
@@ -26,32 +25,37 @@
         </li>
       </ul>
     </section>
-<footer></footer>
+<footer>
+    <img src="../assets/graphics/graphics-footer.svg" alt="">
+</footer>
   </div>
 </template>
 
 <script>
-
+import CartIcon from "./../components/CartIcon"
 export default {
   name: "Meny",
+       components:{
+              CartIcon
+    },
+
   computed: {
     menu() {
       return this.$store.state.menu;
     }
   },
+
   methods: {
-    openMenu() {},
-    openCart() {
-      this.$router.push("/Cart");
-    },
-    additem() {
-      this.$store.dispatch("addToCart", this.item);
+ 
+    additem(item) {
+      this.$store.dispatch("addToCart", item);
+    
     }
   }
 };
 </script>
 
-<style lang="scss" scooped>
+<style lang="scss">
 .menu {
   width: 37.5rem;
   height: 83.9rem;

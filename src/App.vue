@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <router-view />
+    <div id="nav">
+      <router-link to="/">Home</router-link>
+
+// iff errors persists the add a div with id app?
+
+    <router-view/>
   </div>
 </template>
 
@@ -12,10 +17,9 @@ export default {
 };
 </script>
 
-
-<style lang="scss">
-* {
-  margin: 0;
+<style  lang="scss">
+*{
+margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
@@ -23,7 +27,7 @@ export default {
 
 html {
   background: white;
-  max-width: 100vw;
+  max-width: 200vw;
   height: auto;
   padding: 2rem 0;
   display: flex;
