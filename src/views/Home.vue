@@ -1,25 +1,34 @@
 <template>
   <div class="home">
+    <div class="Landing-Page">
+    <h1>{{ msg}}</h1>
+    <img src= "../assets/graphics/airbean-landing.svg" alt="landing" class="airbean-landing" 
+      v-on:click="()=>$router.push('Navigation')"
     
-    <Landing />
+    />
+  
+    
   </div>
+  
+  
+    
+  </div>
+    
 </template>
 
 <script>
 // @ is an alias to /src
-import Landing from '@/components/Landing.vue'
+ 
 
 export default {
   name: 'Home',
-  components: {
-    Landing
-  }
+  
 }
 </script>
 
-<style  lang="scss" >
+<style lang="scss" >
 body{
-  background-color: green;
+  background-color:hotpink;
 }
 
 </style>
