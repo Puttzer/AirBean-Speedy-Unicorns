@@ -23,7 +23,7 @@ export default {
 
 html {
   background: white;
-  max-width: 100vw;
+  max-width: 200vw;
   height: auto;
   padding: 2rem 0;
   display: flex;

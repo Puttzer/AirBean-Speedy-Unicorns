@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import menuList from '../../datamenu/data/menu.json'
+import dataList from './../assets/data/menu.json'
 
 Vue.use(Vuex)
 
@@ -24,9 +24,17 @@ export default new Vuex.Store({
         title:item.title,
         quantity:1
       })
-    }
+    },
     
-  
+    updateItemInCart(state,id){
+      let index = state.cart.findIndex(item => item.id === id)
+      state.cart[index].quantity++;
+
+    },
+    removeItemInCart(state,id){
+      let index = state.cart.findIndex(item => item.id===id)
+      state.cart.splice(index,1)
+    }
 
 },
 
@@ -34,12 +42,19 @@ export default new Vuex.Store({
   
   actions: {
     async getMenuList(context){
-       context.commit('menuListitem',menuList.menu)
+       context.commit('menuListitem',dataList.menu)
 
     },
- 
-      
-    
+    addToCart(context , item){
+      // context.commit('additem' , item)
+        let checkItem = context.state.cart.filter(check => check.id === item.id)
+        
+        if(checkItem.length > 0){
+          context.commit('updateItemInCart',checkItem[0].id)
+        }else{
+          context.commit('additem',item)} 
+      },
+       
    
   },
   modules: {
