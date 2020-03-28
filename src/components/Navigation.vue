@@ -1,7 +1,7 @@
 <template>
 <div class ="Nav">
     <img src= "../assets/graphics/close.svg" alt="close" class="close" 
-      v-on:click="()=>$router.push('Home')"
+      v-on:click="()=>$router.push('/')"
     
     />
 
@@ -10,6 +10,7 @@
          <button v-on:click="()=>$router.push('Meny')">Meny</button>
          <button v-on:click="()=>$router.push('VårtKaffe')">VårtKaffe</button>
          <button v-on:click="()=>$router.push('Orderstatus')">Orderstatus</button>
+         <button v-on:click="()=>$router.push('Profile')">Profile</button>
     </div>  
   
    </div>
@@ -23,14 +24,14 @@
 
 export default {
   name: 'Navigation',
-  components: { Navigation
+  components: {
    
   }
 
 }
 </script>
 
-<style lang="scss"  >
+<style lang="scss"  scoped >
 
 body{
   background-color: rgb(65, 61, 61);
