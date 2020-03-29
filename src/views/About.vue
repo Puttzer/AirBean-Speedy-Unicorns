@@ -115,6 +115,7 @@ p {
   align-items: center;
 }
 .menu-btn {
+  margin-top: -20px;
   border: none;
   text-decoration: none;
   display: inline-block;
@@ -122,8 +123,8 @@ p {
   cursor: pointer;
   width: 4.8rem;
   height: 4.8rem;
-  margin: 2rem;
   border-radius: 50%;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 .menu-btn img {
   width: 2.6rem;
