@@ -115,10 +115,13 @@ p {
   align-items: center;
 }
 .menu-btn {
-  margin-top: -80px;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
   width: 4.8rem;
   height: 4.8rem;
-  border-color: white;
   margin: 2rem;
   border-radius: 50%;
 }
