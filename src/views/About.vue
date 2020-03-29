@@ -1,9 +1,11 @@
 <template>
   <div class="coffee">
-    <div class="fixed-header">
+    <!-- <div class="fixed-header">
       <img src="./../assets/graphics/graphics-header.svg" alt="Header Graphic" />
-    </div>
-
+    </div>-->
+    <button class="menu-btn">
+      <img src="../assets/graphics/navicon.svg" />
+    </button>
     <h1>Vårt Kaffe</h1>
     <h4>
       Pumpkin spice mug, barista cup, sit
@@ -39,12 +41,15 @@
       seasonal, percolator cream black, galão flavour, milk
       aromatic turkish skinny crema.
     </p>
-    <img class="VD" src="../assets/graphics/eva-cortado.jpg" alt="Eva Cortado" />
-    <h2>Eva Cortado</h2>
-    <h5>VD & Grundare</h5>
-    <div class="fixed-footer">
-      <img src="./../assets/graphics/graphics-footer.svg" alt="Footer Graphic" />
+    <div class="person">
+      <img class="VD" src="../assets/graphics/eva-cortado.jpg" alt="Eva Cortado" />
+      <h2>Eva Cortado</h2>
+      <h5>VD & Grundare</h5>
     </div>
+
+    <!-- <div class="fixed-footer">
+      <img src="./../assets/graphics/graphics-footer.svg" alt="Footer Graphic" />
+    </div>-->
   </div>
 
   <!-- Current issues:
@@ -62,29 +67,32 @@ export default {};
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 .coffee {
-  width: 375px;
-  height: 100%;
+  padding: 6rem 1.3rem;
   box-sizing: border-box;
-  margin: 0 auto;
+  background-image: url("../assets/graphics/graphics-header.svg"),
+    url("../assets/graphics/graphics-footer.svg");
+  background-position: top center, bottom center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100%, 100%;
   background-color: #f3e4e1;
-  background-size: 100%;
-  text-align: center;
+  color: black;
 
-  &.fixed-footer {
+  /* &.fixed-footer {
     position: fixed;
     bottom: 0;
   }
   &.fixed-header {
     position: fixed;
     top: 0;
-  }
+  } */
 }
 h1 {
+  padding-top: 20px;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 42px;
-  line-height: 120%;
+  // line-height: 120%;
 }
 h4 {
   font-weight: bold;
@@ -100,6 +108,23 @@ p {
   font-weight: 600;
   font-size: 14px;
   line-height: 160%;
+}
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-btn {
+  margin-top: -80px;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-color: white;
+  margin: 2rem;
+  border-radius: 50%;
+}
+.menu-btn img {
+  width: 2.6rem;
+  height: 2rem;
 }
 </style>
 
