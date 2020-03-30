@@ -61,7 +61,7 @@ button {
 
   &:before {
     content: "";
-    border-bottom: 4px solid white;
+    // border-bottom: 4px solid white;     Interferes with the button on About
     padding: 0 60px;
     position: absolute;
     bottom: 0;

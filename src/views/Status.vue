@@ -1,22 +1,35 @@
 <template>
   <div class="status">
-    <h1>
+    <div class="loading" v-if="load">
+      <img src="./../assets/graphics/loader.png" alt="Generating order" />
+    </div>
+
+    <h1 class="orderNum" v-if="order.orderNr">
       Ordernummer:
-      <strong>#3123D24</strong>
+      <strong>#{{order.orderNr}}</strong>
     </h1>
 
-    <div class="drone-order">
+    <div class="drone-order" v-if="order.orderNr">
       <img src="./../assets/graphics/drone.svg" alt />
       <h1>Din beställning är på väg!</h1>
     </div>
-    <div class="countdown-placeholder">
-      <p>13 minuter</p>
+    <div class="eta" v-if="order.orderNr">
+      <p>{{order.eta}} minuter</p>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    order() {
+      return this.$store.state.activeOrder;
+    },
+    load() {
+      return this.$store.state.load;
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -30,42 +43,45 @@ export default {};
   padding: 1rem;
 
   .drone-order {
+    img {
+      padding-top: 20px;
+      width: 300px;
+      animation: hover 3s linear infinite;
+    }
+    @keyframes hover {
+      0% {
+        transform: translateY(0) rotateZ(0deg);
+      }
+      25% {
+        transform: translateY(0.25rem) rotateZ(1deg);
+      }
+      50% {
+        transform: translateY(0.5rem) rotateZ(0deg);
+      }
+      75% {
+        transform: translateY(0.25rem) rotateZ(-1deg);
+      }
+      100% {
+        transform: translateY(0) rotateZ(0deg);
+      }
+    }
     h1 {
       font-size: 36px;
       font-family: "PT Serif";
       color: white;
     }
   }
-  .countdown-placeholder {
+  .eta {
     font-family: "Work Sans";
   }
 }
-h1 {
+.loading {
+  animation: none;
+}
+.orderNum {
   padding-top: 20px;
   font-size: 16px;
   font-family: "Work Sans";
   color: rgba(255, 255, 255, 0.7);
-}
-img {
-  padding-top: 20px;
-  width: 300px;
-  animation: hover 3s linear infinite;
-}
-@keyframes hover {
-  0% {
-    transform: translateY(0) rotateZ(0deg);
-  }
-  25% {
-    transform: translateY(0.25rem) rotateZ(1deg);
-  }
-  50% {
-    transform: translateY(0.5rem) rotateZ(0deg);
-  }
-  75% {
-    transform: translateY(0.25rem) rotateZ(-1deg);
-  }
-  100% {
-    transform: translateY(0) rotateZ(0deg);
-  }
 }
 </style>
