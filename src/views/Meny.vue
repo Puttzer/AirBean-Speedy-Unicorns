@@ -139,35 +139,27 @@ li {
   font-style: normal;
   font-weight: bold;
 }
-<<<<<<< HEAD
-=======
-.title{
-  margin-left:40px;
-  margin-top:-32px;
+.title {
+  margin-left: 40px;
+  margin-top: -32px;
   padding-bottom: 5px;
-    grid-column: 2/3;
-    grid-row:1/2;
-    display:flex;
-    font-size:2.2rem;
-    
-  
-  }
-  .desc{
-    margin-left:40px;
-      padding-bottom: 25px;
-    display:flex;
-    font-size:16px;
-  }
-  .price{
-    display:flex;
-    font-size:24px;
-      padding-bottom: 5px;
-    font-display: bold;
-      margin-left:270px;
-  margin-top:-80px;
-  }
- 
-
-
->>>>>>> 32811f34e67d6ad2e279cbfa39b8e9368dfaf62b
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  font-size: 2.2rem;
+}
+.desc {
+  margin-left: 40px;
+  padding-bottom: 25px;
+  display: flex;
+  font-size: 16px;
+}
+.price {
+  display: flex;
+  font-size: 24px;
+  padding-bottom: 5px;
+  font-display: bold;
+  margin-left: 270px;
+  margin-top: -80px;
+}
 </style>
