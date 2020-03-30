@@ -124,6 +124,7 @@ p {
   width: 4.8rem;
   height: 4.8rem;
   border-radius: 50%;
+  background-color: white;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 .menu-btn img {
