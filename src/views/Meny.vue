@@ -14,11 +14,12 @@
           <button @click="additem(item)" class="add-btn">
             <img src="../assets/graphics/add.svg" />
           </button>
-          {{ item.title }}
-          <span>...............</span>
-          {{ item.price }}
-          <br />
-          <span>{{ item.desc }}</span>
+          <h3 class="title">
+            {{ item.title}}
+            <span>......................</span>
+          </h3>
+          <p class="desc">{{ item.desc}}</p>
+          <h3 class="price">{{ item .price }} kr</h3>
         </li>
       </ul>
     </section>
@@ -68,8 +69,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
 }
-.menu-btn,
-.cart-btn {
+.menu-btn {
   border-radius: 50%;
   margin: 2rem;
 }
@@ -83,18 +83,8 @@ export default {
   margin: 2rem;
 }
 .menu-btn img {
-  width: 2.6rem;
+  width: 2.4rem;
   height: 2rem;
-}
-.cart-btn {
-  width: 6rem;
-  height: 6rem;
-  background-color: black;
-  border-color: black;
-}
-.cart-btn img {
-  width: 1.6rem;
-  height: 2.1rem;
 }
 
 h1 {
@@ -117,7 +107,7 @@ h1 {
 }
 .products li {
   text-align: start;
-  font-size: 23px;
+  font-size: 25px;
   line-height: 120%;
 }
 .add-btn img {
@@ -146,8 +136,38 @@ h1,
 li {
   text-align: center;
   color: black;
-  // font-family: $PT;
   font-style: normal;
   font-weight: bold;
 }
+<<<<<<< HEAD
+=======
+.title{
+  margin-left:40px;
+  margin-top:-32px;
+  padding-bottom: 5px;
+    grid-column: 2/3;
+    grid-row:1/2;
+    display:flex;
+    font-size:2.2rem;
+    
+  
+  }
+  .desc{
+    margin-left:40px;
+      padding-bottom: 25px;
+    display:flex;
+    font-size:16px;
+  }
+  .price{
+    display:flex;
+    font-size:24px;
+      padding-bottom: 5px;
+    font-display: bold;
+      margin-left:270px;
+  margin-top:-80px;
+  }
+ 
+
+
+>>>>>>> 32811f34e67d6ad2e279cbfa39b8e9368dfaf62b
 </style>

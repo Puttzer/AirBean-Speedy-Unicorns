@@ -20,10 +20,22 @@ export default {
 };
 </script>
 
-<style lang="scss"  scoped>
-body {
-  background-color: hotpink;
+
+
+<style lang="scss">
+.home{
+  height: 100vh;
+  background-color: rgb(20, 63, 20);
+  background-image: url('./../assets/graphics/intro-graphic-left.svg'), url('./../assets/graphics/intro-graphic-right.svg') ; 
+  background-position: top left, top right ;
+  background-size: auto 100%, auto 100% ;
+  background-repeat: no-repeat, no-repeat ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+  
+
 </style>
 
 

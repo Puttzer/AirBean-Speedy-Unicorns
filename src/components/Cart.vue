@@ -40,7 +40,7 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style lang="scss">
 
  .cart{
@@ -53,7 +53,6 @@ export default {
 
    width:300px;
    margin: 1rem;
-   padding-left: 100px;
    box-shadow: 0 0 1rem rgba(0,0,0,.2), 0 0 4rem rgba(0,0,0,.2) ;
    
     
