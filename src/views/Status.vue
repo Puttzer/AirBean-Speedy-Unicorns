@@ -1,14 +1,15 @@
 <template>
   <div class="status">
+    <!-- After clicking "take my money" you will be directed here, Loading show first then orderstatus  -->
     <div class="loading" v-if="load">
       <img src="./../assets/graphics/loader.png" alt="Generating order" />
     </div>
-
+    <h1 v-if="!order.orderNr && !loading">Brewing!</h1>
+    <!-- After loading should display order information and time of arrival -->
     <h1 class="orderNum" v-if="order.orderNr">
       Ordernummer:
       <strong>#{{order.orderNr}}</strong>
     </h1>
-
     <div class="drone-order" v-if="order.orderNr">
       <img src="./../assets/graphics/drone.svg" alt />
       <h1>Din beställning är på väg!</h1>
