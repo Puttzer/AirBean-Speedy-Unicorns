@@ -1,41 +1,41 @@
 <template>
   <div class="menu">
-  
     <section class="upp">
-  
       <button class="menu-btn">
         <img src="../assets/graphics/navicon.svg" />
       </button>
-    
-        <CartIcon />
 
+      <CartIcon />
     </section>
     <h1>Meny</h1>
     <section class="products">
       <ul>
-        <li v-for="item in menu" :key="item.id"  :item="item">
+        <li v-for="item in menu" :key="item.id" :item="item">
           <button @click="additem(item)" class="add-btn">
             <img src="../assets/graphics/add.svg" />
           </button>
-          <h3 class="title">{{ item.title}}<span>......................</span></h3>
-    <p class="desc">{{ item.desc}}</p>
-    <h3 class="price">{{ item .price }} kr</h3>
+          <h3 class="title">
+            {{ item.title}}
+            <span>......................</span>
+          </h3>
+          <p class="desc">{{ item.desc}}</p>
+          <h3 class="price">{{ item .price }} kr</h3>
         </li>
       </ul>
     </section>
-<footer>
-    <img src="../assets/graphics/graphics-footer.svg" alt="">
-</footer>
+    <footer>
+      <img src="../assets/graphics/graphics-footer.svg" alt />
+    </footer>
   </div>
 </template>
 
 <script>
-import CartIcon from "./../components/CartIcon"
+import CartIcon from "./../components/CartIcon";
 export default {
   name: "Meny",
-       components:{
-              CartIcon
-    },
+  components: {
+    CartIcon
+  },
 
   computed: {
     menu() {
@@ -44,10 +44,8 @@ export default {
   },
 
   methods: {
- 
     additem(item) {
       this.$store.dispatch("addToCart", item);
-    
     }
   }
 };
@@ -65,7 +63,7 @@ export default {
 .upp {
   width: 37.5rem;
   height: 11.3rem;
-background-image: url("../assets/graphics/graphics-header.svg");
+  background-image: url("../assets/graphics/graphics-header.svg");
 
   display: flex;
   flex-direction: row;
@@ -76,9 +74,12 @@ background-image: url("../assets/graphics/graphics-header.svg");
   margin: 2rem;
 }
 .menu-btn {
+  border: none;
+  cursor: pointer;
   width: 4.8rem;
   height: 4.8rem;
-  border-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   margin: 2rem;
 }
 .menu-btn img {
@@ -127,9 +128,8 @@ h1 {
 .footer {
   width: 37.5rem;
   height: 7.3rem;
-    background-image: url("../assets/graphics/graphics-footer.svg");
+  background-image: url("../assets/graphics/graphics-footer.svg");
   flex-shrink: 0;
-
 }
 
 h1,
@@ -139,32 +139,27 @@ li {
   font-style: normal;
   font-weight: bold;
 }
-.title{
-  margin-left:40px;
-  margin-top:-32px;
+.title {
+  margin-left: 40px;
+  margin-top: -32px;
   padding-bottom: 5px;
-    grid-column: 2/3;
-    grid-row:1/2;
-    display:flex;
-    font-size:2.2rem;
-    
-  
-  }
-  .desc{
-    margin-left:40px;
-      padding-bottom: 25px;
-    display:flex;
-    font-size:16px;
-  }
-  .price{
-    display:flex;
-    font-size:24px;
-      padding-bottom: 5px;
-    font-display: bold;
-      margin-left:270px;
-  margin-top:-80px;
-  }
- 
-
-
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  font-size: 2.2rem;
+}
+.desc {
+  margin-left: 40px;
+  padding-bottom: 25px;
+  display: flex;
+  font-size: 16px;
+}
+.price {
+  display: flex;
+  font-size: 24px;
+  padding-bottom: 5px;
+  font-display: bold;
+  margin-left: 270px;
+  margin-top: -80px;
+}
 </style>
