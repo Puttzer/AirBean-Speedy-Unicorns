@@ -1,17 +1,18 @@
 <template>
   <div class="Nav">
     <img
-      src="../assets/graphics/close.svg"
+      src="../assets/graphics/close.svg" 
       alt="close"
       class="close"
-      v-on:click="()=>$router.push('Home')"
+      v-on:click="()=>$router.push('Meny')"
     />
 
     <div class="Nav-Container">
       <div class="Nav-Items">
         <button v-on:click="()=>$router.push('Meny')">Meny</button>
-        <button v-on:click="()=>$router.push('VårtKaffe')">VårtKaffe</button>
-        <button v-on:click="()=>$router.push('Orderstatus')">Orderstatus</button>
+        <button v-on:click="()=>$router.push('About')">VårtKaffe</button>
+        <button v-on:click="()=>$router.push('status')">Orderstatus</button>
+         <button v-on:click="()=>$router.push('Profile')">Profile</button>
       </div>
     </div>
   </div>
@@ -20,11 +21,10 @@
 
 <script>
 export default {
-  name: "Navigation"
-  // components: { Navigation
-
-  // }
-};
+  name: 'Navigation',
+  
+  
+}
 </script>
 
 <style lang="scss"  >

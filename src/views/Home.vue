@@ -1,11 +1,12 @@
 <template>
   <div class="home">
     <div class="Landing-Page">
+      
       <img
         src="../assets/graphics/airbean-landing.svg"
         alt="landing"
         class="airbean-landing"
-        v-on:click="()=>$router.push('meny')"
+        v-on:click="()=>$router.push('Meny')"  
       />
     </div>
   </div>

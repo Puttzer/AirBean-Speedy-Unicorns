@@ -18,7 +18,7 @@ export default {
   },
   methods:{
     login(){  
-    // localStorage.setItem('cookie-consent', true)
+  
     this.$router.push('/profile')  
     }
   }

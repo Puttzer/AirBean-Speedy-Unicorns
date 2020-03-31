@@ -1,7 +1,11 @@
 <template>
   <div class="menu">
     <section class="upp">
+<<<<<<< HEAD
       <button class="menu-btn" v-on:click="()=>$router.push('Navigation')">
+=======
+      <button class="menu-btn" @click="$router.push('/Navigation')">
+>>>>>>> 1c2bfef720f4200cac934dd57a0fe78ffeb186d9
         <img src="../assets/graphics/navicon.svg" />
       </button>
       <CartIcon />
@@ -30,6 +34,7 @@
 
 <script>
 import CartIcon from "./../components/CartIcon";
+
 export default {
   name: "Meny",
   components: {
@@ -40,6 +45,10 @@ export default {
     menu() {
       return this.$store.state.menu;
     }
+
+    //  seeNavigation(){
+    //    return this.$store.state.seeNavigation
+    //  }
   },
 
   methods: {
@@ -92,6 +101,7 @@ html{
   border-radius: 50%;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   margin: 2rem;
+  background-color: #ffffff;
 }
 .menu-btn img {
   width: 2.4rem;

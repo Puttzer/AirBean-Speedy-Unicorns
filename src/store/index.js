@@ -3,13 +3,13 @@ import Vuex from 'vuex'
 import axios from 'axios'
 
 import dataList from './../assets/data/menu.json'
-const API = 'http://localhost:8080/api/beans'
+const API = 'http://localhost:5000/api/beans'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    seeNavigation: false,
+    // seeNavigation: false,
     activeOrder: {},
     menu: [],
     cart: [],
@@ -27,7 +27,9 @@ export default new Vuex.Store({
         price: item.price,
         title: item.title,
         quantity: 1
+
       })
+
     },
     orderStatus(state, order) {
       console.log("If you can see this all is working so far")
@@ -64,21 +66,23 @@ export default new Vuex.Store({
         context.commit('additem', item)
       }
     },
+
+
+
     async makeOrder(context) {
-      console.log("Brewing!")
+      console.log("Brewing! if youre seeing this, working as intended so far")
       let order = {
         items: context.state.cart
       }
-
-      let uuid = await localStorage.getItem('airbeans')
-
       try {
-        context.state.loading = true
-        let resp = await axios.post(`${API}/order/${uuid}`, order)
-        context.state.loading = false
+        context.state.load = true
+        let resp = await axios.post(`${API}/order/`, order)
+        console.log(resp)
+        context.state.load = false
         context.commit('orderStatus', resp.data)
       } catch (err) {
         console.log(err)
+        console.log("oopsie something went wrong!")
       }
     }
 

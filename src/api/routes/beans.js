@@ -9,10 +9,11 @@ router.get('/', async (req, res) => {
     menu.pipe(res);
 });
 
-router.post('/', async (req, res) => {
+router.post('/order', async (req, res) => {
     const order = {
         eta: generateETA(),
         orderNr: generateOrderNr(),
+        // items: req.body.items,
     }
 
     setTimeout(() => {
