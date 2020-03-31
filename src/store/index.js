@@ -70,7 +70,7 @@ export default new Vuex.Store({
 
 
     async makeOrder(context) {
-      console.log("Brewing!")
+      console.log("Brewing! if youre seeing this, working as intended so far")
       let order = {
         items: context.state.cart
       }
@@ -84,6 +84,7 @@ export default new Vuex.Store({
         context.commit('orderStatus', resp.data)
       } catch (err) {
         console.log(err)
+        console.log("oopsie something went wrong!")
       }
     }
 

@@ -1,10 +1,10 @@
 <template>
   <div class="status">
     <!-- After clicking "take my money" you will be directed here, Loading show first then orderstatus  -->
-    <div class="loading" v-if="load">
+    <div class="loading" v-if="loading">
       <img src="./../assets/graphics/loader.png" alt="Generating order" />
     </div>
-    <h1 v-if="!order.orderNr && !loading">Brewing!</h1>
+    <h1 v-if="loading">Brewing!</h1>
     <!-- After loading should display order information and time of arrival -->
     <h1 class="orderNum" v-if="order.orderNr">
       Ordernummer:
@@ -17,6 +17,7 @@
     <div class="eta" v-if="order.orderNr">
       <p>{{order.eta}} minuter</p>
     </div>
+    <a href="#" class="btn" v-if="order.orderNr" @click="$router.push('/menu')">OK, Cool!</a>
   </div>
 </template>
 
@@ -26,7 +27,7 @@ export default {
     order() {
       return this.$store.state.activeOrder;
     },
-    load() {
+    loading() {
       return this.$store.state.load;
     }
   }
@@ -75,14 +76,36 @@ export default {
   .eta {
     font-family: "Work Sans";
   }
+  .btn {
+    display: flex;
+    max-width: 14rem;
+    width: 100%;
+    font-family: "PT Serif", serif;
+    font-size: 1.4rem;
+    text-decoration: none;
+    height: 4rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    color: #222;
+    border-radius: 999rem;
+    background: rgba($color: #ffffff, $alpha: 0.8);
+    &:active {
+      background: white;
+    }
+  }
 }
 .loading {
   animation: none;
+  padding-top: 250px;
 }
 .orderNum {
   padding-top: 20px;
   font-size: 16px;
   font-family: "Work Sans";
   color: rgba(255, 255, 255, 0.7);
+}
+h1 {
+  font-family: "Pt Serif";
 }
 </style>
