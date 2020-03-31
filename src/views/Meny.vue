@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
     <section class="upp">
-      <button class="menu-btn">
+      <button class="menu-btn" @click="$router.push('/Navigation')">
         <img src="../assets/graphics/navicon.svg" />
       </button>
 
@@ -31,6 +31,7 @@
 
 <script>
 import CartIcon from "./../components/CartIcon";
+
 export default {
   name: "Meny",
   components: {
@@ -41,6 +42,10 @@ export default {
     menu() {
       return this.$store.state.menu;
     }
+
+    //  seeNavigation(){
+    //    return this.$store.state.seeNavigation
+    //  }
   },
 
   methods: {

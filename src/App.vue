@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <Navigation v-if="seeNavigation" />
+      <!-- <Navigation v-if="seeNavigation"/>  -->
       <!-- <router-link to="/"></router-link>  -->
     </div>
     <router-view />
@@ -9,17 +9,17 @@
 </template>
 
 <script>
-import Navigation from "./components/Navigation";
+// import Navigation from './components/Navigation'
 export default {
   name: "App",
   components: {
-    Navigation
+    // Navigation
   },
-  computed: {
-    seeNavigation() {
-      return this.$store.state.seeNavigation;
-    }
-  },
+  // computed:{
+  //   seeNavigation(){
+  //     return this.$store.state.seeNavigation
+  //   }
+  // }
   created() {
     this.$store.dispatch("getMenuList");
   }
@@ -43,6 +43,12 @@ export default {
   box-sizing: border-box;
   max-width: 480px;
   margin: 0;
+  max-width: 200vw;
+  height: auto;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // export default {

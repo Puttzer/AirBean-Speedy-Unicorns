@@ -4,6 +4,9 @@ import Home from '../views/Home.vue'
 import Profile from '../views/Profile.vue'
 import About from '../views/About.vue'
 import Status from '../views/Status.vue'
+import Navigation from '../views/Navigation.vue'
+
+
 
 Vue.use(VueRouter)
 
@@ -33,9 +36,14 @@ const routes = [
     path: '/status',
     name: 'Status',
     component: Status
-  }
+  },
 
 
+  {
+    path: '/Navigation',
+    name: 'Navigation',
+    component: Navigation
+  },
 
   // {
   //   path: '',
