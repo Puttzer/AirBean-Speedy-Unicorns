@@ -13,7 +13,7 @@ export default new Vuex.Store({
     activeOrder: {},
     menu: [],
     cart: [],
-    load: false,
+    load: true,
 
   },
   mutations: {
@@ -27,7 +27,9 @@ export default new Vuex.Store({
         price: item.price,
         title: item.title,
         quantity: 1
+
       })
+
     },
     orderStatus(state, order) {
       console.log("If you can see this all is working so far")
@@ -64,6 +66,9 @@ export default new Vuex.Store({
         context.commit('additem', item)
       }
     },
+
+
+
     async makeOrder(context) {
       console.log("Brewing!")
       let order = {
