@@ -1,11 +1,7 @@
 <template>
   <div class="menu">
     <section class="upp">
-<<<<<<< HEAD
-      <button class="menu-btn" v-on:click="()=>$router.push('Navigation')">
-=======
       <button class="menu-btn" @click="$router.push('/Navigation')">
->>>>>>> 1c2bfef720f4200cac934dd57a0fe78ffeb186d9
         <img src="../assets/graphics/navicon.svg" />
       </button>
       <CartIcon />
@@ -60,7 +56,7 @@ export default {
 </script>
 
 <style lang="scss">
-html{
+html {
   width: 500px;
   margin: auto;
   height: auto;
@@ -83,7 +79,7 @@ html{
   background-image: url("../assets/graphics/graphics-header.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -132,7 +128,6 @@ h1 {
 .add-btn img {
   width: 1.2rem;
   height: 1.2rem;
-
 }
 .add-btn {
   display: flex;
@@ -144,13 +139,12 @@ h1 {
   border-radius: 50%;
   border-color: black;
   background-color: black;
-    margin-right: 450px;
-  
+  margin-right: 450px;
 }
 footer {
   background-image: url("../assets/graphics/graphics-footer.svg");
   flex-shrink: 0;
-    background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
