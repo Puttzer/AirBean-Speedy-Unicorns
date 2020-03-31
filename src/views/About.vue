@@ -1,7 +1,7 @@
 <template>
   <div class="coffee">
     <div class="fixed-header">
-      <img src="./../assets/graphics/graphics-header.svg" alt="Header Graphic" />
+      <img src="../assets/graphics/graphics-header.svg" alt="Header Graphic" />
     </div>
 
     <h1>Vårt Kaffe</h1>
