@@ -13,7 +13,7 @@ export default new Vuex.Store({
     activeOrder: {},
     menu: [],
     cart: [],
-    load: false,
+    load: true,
 
   },
   mutations: {

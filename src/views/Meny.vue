@@ -1,10 +1,9 @@
 <template>
   <div class="menu">
     <section class="upp">
-      <button class="menu-btn">
+      <button class="menu-btn" v-on:click="()=>$router.push('Navigation')">
         <img src="../assets/graphics/navicon.svg" />
       </button>
-
       <CartIcon />
     </section>
     <h1>Meny</h1>
@@ -16,7 +15,7 @@
           </button>
           <h3 class="title">
             {{ item.title}}
-            <span>......................</span>
+            <span>..............</span>
           </h3>
           <p class="desc">{{ item.desc}}</p>
           <h3 class="price">{{ item .price }} kr</h3>
@@ -52,11 +51,20 @@ export default {
 </script>
 
 <style lang="scss">
+html{
+  width: 500px;
+  margin: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  background-color: white;
+}
 .menu {
   width: 37.5rem;
   height: 83.9rem;
   background: rgb(212, 178, 178);
-
   display: flex;
   flex-direction: column;
 }
@@ -64,7 +72,9 @@ export default {
   width: 37.5rem;
   height: 11.3rem;
   background-image: url("../assets/graphics/graphics-header.svg");
-
+  background-size: cover;
+  background-repeat: no-repeat;
+  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -72,6 +82,7 @@ export default {
 .menu-btn {
   border-radius: 50%;
   margin: 2rem;
+  background-color: whitesmoke;
 }
 .menu-btn {
   border: none;
@@ -89,7 +100,6 @@ export default {
 
 h1 {
   font-size: 42px;
-  line-height: 120%;
   margin: 1.5rem;
 }
 
@@ -97,7 +107,6 @@ h1 {
   flex: 1 0 auto;
 
   width: 31.1rem;
-  height: 47.4rem;
   margin: 1rem;
 }
 .products ul {
@@ -113,6 +122,7 @@ h1 {
 .add-btn img {
   width: 1.2rem;
   height: 1.2rem;
+
 }
 .add-btn {
   display: flex;
@@ -124,12 +134,14 @@ h1 {
   border-radius: 50%;
   border-color: black;
   background-color: black;
+    margin-right: 450px;
+  
 }
-.footer {
-  width: 37.5rem;
-  height: 7.3rem;
+footer {
   background-image: url("../assets/graphics/graphics-footer.svg");
   flex-shrink: 0;
+    background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1,
@@ -140,17 +152,15 @@ li {
   font-weight: bold;
 }
 .title {
-  margin-left: 40px;
-  margin-top: -32px;
+  margin-left: 70px;
+  margin-top: -35px;
   padding-bottom: 5px;
-  grid-column: 2/3;
-  grid-row: 1/2;
   display: flex;
-  font-size: 2.2rem;
+  font-size: 1.7rem;
 }
 .desc {
-  margin-left: 40px;
-  padding-bottom: 25px;
+  margin-left: 70px;
+  padding-bottom: 60px;
   display: flex;
   font-size: 16px;
 }
@@ -159,7 +169,8 @@ li {
   font-size: 24px;
   padding-bottom: 5px;
   font-display: bold;
-  margin-left: 270px;
-  margin-top: -80px;
+  margin-left: 350px;
+  margin-top: -130px;
+  margin-right: 0;
 }
 </style>

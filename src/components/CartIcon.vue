@@ -45,10 +45,10 @@ import Cart from './Cart'
 <style lang="scss">
 .icon{
     background-color: black;
-    width:55px;
-    height: 55px;
+    width:75px;
+    height: 75px;
     border-radius: 100%;
-    margin-top: 20px;
+    margin-top: 35px;
     margin-right: 25px;
     
 }
@@ -57,13 +57,11 @@ import Cart from './Cart'
     display: flex;
     justify-content: center;
     align-items: center;
-    width: .8rem;
+    width: 1.2rem;
     height:0.8rem;
     padding:1.6rem;       
     border-radius:100%;
     float:right;
- margin-right: 12px;
- margin-top: 8px;
 
     .count{
     position: absolute;

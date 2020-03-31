@@ -43,18 +43,16 @@ export default {
 
 <style lang="scss">
 
+
  .cart{
-   position:fixed;
    background:white;
    top: 7rem;
    right: 1rem;
    left: 1rem;
-   
-
    width:300px;
    margin: 1rem;
    box-shadow: 0 0 1rem rgba(0,0,0,.2), 0 0 4rem rgba(0,0,0,.2) ;
-   
+   margin-top: 400px;
     
     &after {
      content: '';
