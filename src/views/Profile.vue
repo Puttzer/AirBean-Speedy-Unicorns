@@ -18,11 +18,7 @@ import Login from "@/components/Login.vue"
         show:true   
         }
     },
-    // created(){
-    //     if(localStorage.getItem('airbeans')){
-    //        this.show = true
-    // } 
-    // },
+    
     components: {
         Login,
     

@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Profile from '../views/Profile.vue'
 import About from '../views/About.vue'
+import Navigation from '../views/Navigation.vue'
+
+
 
 Vue.use(VueRouter)
 
@@ -29,6 +32,11 @@ const routes = [
     component: Profile
   },
 
+  {
+    path: '/Navigation',
+    name: 'Navigation',
+    component: Navigation
+  },
 
   
   // {

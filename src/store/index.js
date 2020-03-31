@@ -7,10 +7,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    seeNavigation:false,
+   // seeNavigation:true,
     activeOrder: {},
     menu:[],
-    cart:[],
+    cart:[], 
   
   },
   mutations: {
