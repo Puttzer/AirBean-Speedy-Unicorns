@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import axios from 'axios'
 
 import dataList from './../assets/data/menu.json'
-const API = 'http://localhost:8080/api/beans'
+const API = 'http://localhost:5000/api/beans'
 
 Vue.use(Vuex)
 
@@ -13,7 +13,7 @@ export default new Vuex.Store({
     activeOrder: {},
     menu: [],
     cart: [],
-    load: true,
+    load: false,
 
   },
   mutations: {
@@ -74,13 +74,11 @@ export default new Vuex.Store({
       let order = {
         items: context.state.cart
       }
-
-      let uuid = await localStorage.getItem('airbeans')
-
       try {
-        context.state.loading = true
-        let resp = await axios.post(`${API}/order/${uuid}`, order)
-        context.state.loading = false
+        context.state.load = true
+        let resp = await axios.post(`${API}/order/`, order)
+        console.log(resp)
+        context.state.load = false
         context.commit('orderStatus', resp.data)
       } catch (err) {
         console.log(err)

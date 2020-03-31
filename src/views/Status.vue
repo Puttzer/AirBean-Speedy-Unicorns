@@ -5,6 +5,7 @@
       <img src="./../assets/graphics/loader.png" alt="Generating order" />
     </div>
     <h1 v-if="loading">Brewing!</h1>
+
     <!-- After loading should display order information and time of arrival -->
     <h1 class="orderNum" v-if="order.orderNr">
       Ordernummer:
@@ -17,7 +18,7 @@
     <div class="eta" v-if="order.orderNr">
       <p>{{order.eta}} minuter</p>
     </div>
-    <a href="#" class="btn" v-if="order.orderNr" @click="$router.push('/menu')">OK, Cool!</a>
+    <a href="#" class="btn" v-if="order.orderNr" @click="$router.push('/meny')">OK, Cool!</a>
   </div>
 </template>
 
