@@ -9,7 +9,6 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    // seeNavigation: false,
     activeOrder: {},
     menu: [],
     cart: [],
@@ -48,8 +47,6 @@ export default new Vuex.Store({
     }
 
   },
-
-
 
   actions: {
     async getMenuList(context) {

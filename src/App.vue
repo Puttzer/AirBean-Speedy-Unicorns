@@ -1,25 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      <!-- <Navigation v-if="seeNavigation"/>  -->
-      <!-- <router-link to="/"></router-link>  -->
     </div>
     <router-view />
   </div>
 </template>
 
 <script>
-// import Navigation from './components/Navigation'
 export default {
   name: "App",
-  components: {
-    // Navigation
-  },
-  // computed:{
-  //   seeNavigation(){
-  //     return this.$store.state.seeNavigation
-  //   }
-  // }
   created() {
     this.$store.dispatch("getMenuList");
   }
