@@ -47,8 +47,6 @@ export default new Vuex.Store({
 
   },
 
-
-
   actions: {
     async getMenuList(context) {
       let res = await axios.get(API)
@@ -85,6 +83,10 @@ export default new Vuex.Store({
     }
 
 
+  },
+  mutations: {
+  },
+  actions: {
   },
   modules: {
   }
