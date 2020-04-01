@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 
-import dataList from './../assets/data/menu.json'
+// import dataList from './../assets/data/menu.json'
 const API = 'http://localhost:5000/api/beans'
 
 Vue.use(Vuex)
@@ -53,8 +53,9 @@ export default new Vuex.Store({
 
   actions: {
     async getMenuList(context) {
-      context.commit('menuListitem', dataList.menu)
-
+      let res = await axios.get(API)
+      console.log(res)
+      context.commit('menuListitem', res.data.menu)
     },
     addToCart(context, item) {
       // context.commit('additem' , item)
