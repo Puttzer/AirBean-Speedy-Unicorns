@@ -88,7 +88,7 @@ button {
   height: 40px;
   opacity: 0.7;
   border-radius: 50%;
-  background: yellow;
+  background: white;
 }
 
 .close:hover {
