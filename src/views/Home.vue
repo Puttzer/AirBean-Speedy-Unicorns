@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <div class="Landing-Page">
+      <!-- a comment for pull request! -->
       <img
         src="../assets/graphics/airbean-landing.svg"
         alt="landing"

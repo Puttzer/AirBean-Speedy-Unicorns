@@ -6,7 +6,7 @@
       class="close"
       v-on:click="()=>$router.push('Meny')"
     />
-
+    <!-- a comment for pull request! -->
     <div class="Nav-Container">
       <div class="Nav-Items">
         <button v-on:click="()=>$router.push('Meny')">Meny</button>

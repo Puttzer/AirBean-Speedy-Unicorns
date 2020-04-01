@@ -7,6 +7,7 @@
       <CartIcon />
     </section>
     <h1>Meny</h1>
+    <!-- a comment for pull request! -->
     <section class="products">
       <ul>
         <li v-for="item in menu" :key="item.id" :item="item">

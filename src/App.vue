@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- a comment for pull request! -->
     <div id="nav">
     </div>
     <router-view />
