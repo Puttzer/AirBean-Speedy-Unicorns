@@ -2,14 +2,12 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 
-// import dataList from './../assets/data/menu.json'
 const API = 'http://localhost:5000/api/beans'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    // seeNavigation: false,
     activeOrder: {},
     menu: [],
     cart: [],
@@ -58,7 +56,6 @@ export default new Vuex.Store({
       context.commit('menuListitem', res.data.menu)
     },
     addToCart(context, item) {
-      // context.commit('additem' , item)
       let checkItem = context.state.cart.filter(check => check.id === item.id)
 
       if (checkItem.length > 0) {
