@@ -55,7 +55,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 html {
   width: 500px;
   margin: auto;
@@ -72,6 +72,7 @@ html {
   background: rgb(212, 178, 178);
   display: flex;
   flex-direction: column;
+  margin-left: 350px;
 }
 .upp {
   width: 37.5rem;
