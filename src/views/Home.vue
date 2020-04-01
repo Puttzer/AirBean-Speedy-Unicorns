@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-<<<<<<< HEAD
     <div class="Landing-Page">
       <img
         src="../assets/graphics/airbean-landing.svg"
@@ -9,30 +8,15 @@
         v-on:click="()=>$router.push('Meny')"
       />
     </div>
-=======
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
->>>>>>> 561dcf3aba7bd9cf975ef6b3ce07b01b1c4cd6d0
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-<<<<<<< HEAD
 
 export default {
   name: "Home"
 };
-=======
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
->>>>>>> 561dcf3aba7bd9cf975ef6b3ce07b01b1c4cd6d0
 </script>
 
 
