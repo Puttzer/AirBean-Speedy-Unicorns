@@ -1,11 +1,7 @@
 <template>
   <div class="menu">
     <section class="upp">
-<<<<<<< HEAD
-      <button class="menu-btn" v-on:click="()=>$router.push('Navigation')">
-=======
       <button class="menu-btn" @click="$router.push('/Navigation')">
->>>>>>> 1c2bfef720f4200cac934dd57a0fe78ffeb186d9
         <img src="../assets/graphics/navicon.svg" />
       </button>
       <CartIcon />
