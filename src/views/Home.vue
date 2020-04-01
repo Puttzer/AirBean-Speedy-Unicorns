@@ -1,12 +1,11 @@
 <template>
   <div class="home">
     <div class="Landing-Page">
-      
       <img
         src="../assets/graphics/airbean-landing.svg"
         alt="landing"
         class="airbean-landing"
-        v-on:click="()=>$router.push('Meny')"  
+        v-on:click="()=>$router.push('Meny')"
       />
     </div>
   </div>
@@ -23,7 +22,7 @@ export default {
 
 
 <style lang="scss">
-.home{
+.home {
   position: relative;
   width: 500px;
   margin: auto;
@@ -36,9 +35,14 @@ export default {
     url("../assets/graphics/intro-graphic-right.svg") center right no-repeat;
   background-color: darkgreen;
   background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
 }
-  
-
 </style>
 
 

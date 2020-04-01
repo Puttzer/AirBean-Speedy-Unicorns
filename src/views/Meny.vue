@@ -72,6 +72,7 @@ html {
   background: rgb(212, 178, 178);
   display: flex;
   flex-direction: column;
+  margin-left: 350px;
 }
 .upp {
   width: 37.5rem;
