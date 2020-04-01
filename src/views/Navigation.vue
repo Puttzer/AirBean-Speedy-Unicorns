@@ -36,7 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 20%;
   justify-content: space-around;
 }
 
@@ -84,11 +84,11 @@ button {
 
 .close {
   position: absolute;
-  left: 32px;
-  top: 32px;
+  left: 100px;
+  top: 60px;
   width: 40px;
   height: 40px;
-  opacity: 0.3;
+  opacity: 0.7;
   border-radius: 50%;
   background: yellow;
 }

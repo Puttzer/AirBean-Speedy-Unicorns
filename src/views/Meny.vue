@@ -78,6 +78,7 @@ export default {
 
   display: flex;
   flex-direction: column;
+  margin-left: 350px;
 }
 .upp {
   width: 37.5rem;
