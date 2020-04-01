@@ -55,7 +55,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 html {
   width: 500px;
   margin: auto;
