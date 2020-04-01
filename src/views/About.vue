@@ -4,6 +4,7 @@
       <img src="../assets/graphics/navicon.svg" />
     </button>
     <h1>Vårt Kaffe</h1>
+    <!-- a comment for pull request! -->
     <h4>
       Pumpkin spice mug, barista cup, sit
       macchiato, kopi-luwak, doppio, grounds

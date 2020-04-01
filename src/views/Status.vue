@@ -1,5 +1,6 @@
 <template>
   <div class="status">
+    <!-- a comment for pull request! -->
     <!-- After clicking "take my money" you will be directed here, Loading show first then orderstatus  -->
     <div class="loading" v-if="loading">
       <img src="./../assets/graphics/loader.png" alt="Generating order" />
