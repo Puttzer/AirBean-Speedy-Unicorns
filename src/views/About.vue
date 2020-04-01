@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <div class="coffee">
     <button class="menu-btn">
       <img src="../assets/graphics/navicon.svg" />
@@ -114,9 +113,3 @@ p {
 
 
 
-=======
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
->>>>>>> 561dcf3aba7bd9cf975ef6b3ce07b01b1c4cd6d0
