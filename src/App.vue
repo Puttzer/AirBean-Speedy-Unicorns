@@ -6,7 +6,6 @@
     </div>
     <router-view />
   </div>
-
 </template>
 
 <script>
@@ -35,14 +34,8 @@ export default {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: white;
 }
-html{
-     display: flex;
-  justify-content: center;
-  align-items: center;
-    background:white;
-}
+
 #app {
   font-family: "Work Sans";
   text-align: center;
@@ -51,4 +44,3 @@ html{
   margin: 0;
   background: white;
 }
-

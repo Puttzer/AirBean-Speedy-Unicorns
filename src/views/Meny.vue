@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style lang="scss">
-html{
+html {
   width: 500px;
   margin: auto;
   height: auto;
@@ -79,7 +79,7 @@ html{
   background-image: url("../assets/graphics/graphics-header.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -128,7 +128,6 @@ h1 {
 .add-btn img {
   width: 1.2rem;
   height: 1.2rem;
-
 }
 .add-btn {
   display: flex;
@@ -140,13 +139,12 @@ h1 {
   border-radius: 50%;
   border-color: black;
   background-color: black;
-    margin-right: 450px;
-  
+  margin-right: 450px;
 }
 footer {
   background-image: url("../assets/graphics/graphics-footer.svg");
   flex-shrink: 0;
-    background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 

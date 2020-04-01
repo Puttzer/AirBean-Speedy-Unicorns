@@ -1,12 +1,5 @@
 <template>
   <div class="coffee">
-    <div class="fixed-header">
-      <img src="../assets/graphics/graphics-header.svg" alt="Header Graphic" />
-    </div>
-
-    <!-- <div class="fixed-header">
-      <img src="./../assets/graphics/graphics-header.svg" alt="Header Graphic" />
-    </div>-->
     <button class="menu-btn">
       <img src="../assets/graphics/navicon.svg" />
     </button>
@@ -39,28 +32,16 @@
       spice iced. At extra, rich grinder, brewed to go,
       steamed half and half at, that, percolator macchiato
       trifecta and body as arabica dripper. In galão black
-      java milk sit trifecta, robusta, acerbic café au lait
-      instant shop latte. Seasonal bar shop filter aroma id,
-      crema, affogato viennese cultivar aftertaste,
-      seasonal, percolator cream black, galão flavour, milk
-      aromatic turkish skinny crema.
+      java milk sit trifecta, robusta, acerbic café au lait instant shop latte.
+      <br />
+      <br />Stop right there criminal scum! You violated the law. Pay the court a fine or serve your sentence. Your stolen goods are now forfeit.
     </p>
     <div class="person">
       <img class="VD" src="../assets/graphics/eva-cortado.jpg" alt="Eva Cortado" />
       <h2>Eva Cortado</h2>
       <h5>VD & Grundare</h5>
     </div>
-
-    <!-- <div class="fixed-footer">
-      <img src="./../assets/graphics/graphics-footer.svg" alt="Footer Graphic" />
-    </div>-->
   </div>
-
-  <!-- Current issues:
-                      *Header and footer graphic arent properly setup, Small gaps 
-                      *Text allignment. H1 and P arent lined up properly. Nor does p have proper padding 
-                      towards container wall.                   
-  -->
 </template>
 
 <script>
@@ -75,20 +56,12 @@ export default {};
   box-sizing: border-box;
   background-image: url("../assets/graphics/graphics-header.svg"),
     url("../assets/graphics/graphics-footer.svg");
+
   background-position: top center, bottom center;
   background-repeat: no-repeat, no-repeat;
   background-size: 100%, 100%;
   background-color: #f3e4e1;
   color: black;
-
-  /* &.fixed-footer {
-    position: fixed;
-    bottom: 0;
-  }
-  &.fixed-header {
-    position: fixed;
-    top: 0;
-  } */
 }
 h1 {
   padding-top: 20px;
