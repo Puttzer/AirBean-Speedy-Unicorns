@@ -28,6 +28,23 @@ const routes = [
   },
 
   {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile
+  },
+  {
+    path: '/status',
+    name: 'Status',
+    component: Status
+  },
+
+
+  {
+    path: '/Navigation',
+    name: 'Navigation',
+    component: Navigation
+  },
+{
     path: '/about',
     name: 'About',
     // route level code-splitting
