@@ -4,8 +4,9 @@
       <button class="menu-btn" @click="$router.push('/Navigation')">
         <img src="../assets/graphics/navicon.svg" />
       </button>
-      <CartIcon />
+   
     </section>
+           <CartBag/>
     <h1>Meny</h1>
     <!-- a comment for pull request! -->
     <section class="products">
@@ -30,12 +31,12 @@
 </template>
 
 <script>
-import CartIcon from "./../components/CartIcon";
+import CartBag from "../components/CartBag"
 
 export default {
   name: "Meny",
   components: {
-    CartIcon
+    CartBag
   },
 
   computed: {

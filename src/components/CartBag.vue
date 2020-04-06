@@ -1,9 +1,10 @@
 <template>
+<div class="icon">
     <div class="carticon">
         <div class="count" >{{ cartLength }}</div>
         <img src="../assets/graphics/bag.svg" alt="Carticon" @click="showCart =! showCart" />
         <Cart v-if="showCart" />
-
+</div>
     </div>
 </template>
 
@@ -37,6 +38,9 @@ import Cart from './Cart'
 </script>
 
 <style lang="scss">
+.icon{
+    padding-left: 300px
+}
 .carticon {
     background:black;
     display: flex;
@@ -47,7 +51,7 @@ import Cart from './Cart'
     padding:1.6rem;       
     border-radius:100%;
     float:right;
-    margin-top:-65px;
+    margin-top:-150px;
     margin-right:30px;
     .count{
     position: absolute;
