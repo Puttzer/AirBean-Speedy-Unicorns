@@ -69,6 +69,7 @@ html {
   background-color: white;
 }
 .menu {
+  background-color:white ;
   width: 37.5rem;
   height: 83.9rem;
   background: rgb(212, 178, 178);

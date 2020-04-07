@@ -46,8 +46,8 @@ import Cart from './Cart'
     display: flex;
     justify-content: center;
     align-items: center;
-    width: .8rem;
-    height:0.8rem;
+    width: 1.2rem;
+    height:1.2rem;
     padding:1.6rem;       
     border-radius:100%;
     float:right;

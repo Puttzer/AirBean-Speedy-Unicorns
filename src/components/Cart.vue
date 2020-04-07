@@ -1,4 +1,5 @@
 <template>
+<div class="cartview">
   <div class="cart">
     <h3>Din beställning</h3>
     <CartItem v-for="(item,index) in cart" v-bind:key="index" v-bind:item="item" />
@@ -11,6 +12,7 @@
       <p>Inkl moms + drönarleverans</p>
     </div>
     <a href class="button" @click.prevent="makeOrder">Take My Money</a>
+  </div>
   </div>
 </template>
 
@@ -44,14 +46,19 @@ export default {
 
 
 <style lang="scss">
+.cartview{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 400px;
+}
 .cart {
-  position: fixed;
   background: white;
   top: 7rem;
   right: 1rem;
   left: 1rem;
 
-  width: 300px;
+  width: 350px;
   margin: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2), 0 0 4rem rgba(0, 0, 0, 0.2);
 
