@@ -1,6 +1,6 @@
 <template>
   <div class="coffee">
-    <button class="menu-btn">
+    <button class="menu-btn" @click="$router.push('/Navigation')">
       <img src="../assets/graphics/navicon.svg" />
     </button>
     <h1>Vårt Kaffe</h1>

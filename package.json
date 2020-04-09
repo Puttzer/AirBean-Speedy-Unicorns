@@ -45,5 +45,17 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Puttzer/AirBean-Speedy-Unicorns.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Puttzer/AirBean-Speedy-Unicorns/issues"
+  },
+  "homepage": "https://github.com/Puttzer/AirBean-Speedy-Unicorns#readme"
 }
