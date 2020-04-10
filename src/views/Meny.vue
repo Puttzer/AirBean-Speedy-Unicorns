@@ -4,9 +4,8 @@
       <button class="menu-btn" @click="$router.push('/Navigation')">
         <img src="../assets/graphics/navicon.svg" />
       </button>
-   
     </section>
-           <CartBag/>
+    <CartBag />
     <h1>Meny</h1>
     <!-- a comment for pull request! -->
     <section class="products">
@@ -15,23 +14,24 @@
           <button @click="additem(item)" class="add-btn">
             <img src="../assets/graphics/add.svg" />
           </button>
-          <h3 class="title">
-            {{ item.title}}
-            <span>..............</span>
-          </h3>
-          <p class="desc">{{ item.desc}}</p>
-          <h3 class="price">{{ item .price }} kr</h3>
+          <div class="products__outer-wrapper">
+            <div class="products__inner-wrapper">
+              <h3 class="title">
+                <span>{{ item.title}}</span>
+              </h3>
+              <h3 class="price">{{ item.price }} kr</h3>
+            </div>
+            <p class="desc">{{ item.desc}}</p>
+          </div>
         </li>
       </ul>
     </section>
-    <footer>
-      <img src="../assets/graphics/graphics-footer.svg" alt />
-    </footer>
+    <footer></footer>
   </div>
 </template>
 
 <script>
-import CartBag from "../components/CartBag"
+import CartBag from "../components/CartBag";
 
 export default {
   name: "Meny",
@@ -58,30 +58,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-html {
-  width: 500px;
-  margin: auto;
-  height: auto;
+.products__outer-wrapper {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: contain;
-  background-color: white;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.products__inner-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 8px;
+}
+.products__inner-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 5px;
+  height: 0;
+  line-height: 0;
+  border-bottom: 2px dotted #000;
 }
 .menu {
-  background-color:white ;
-  width: 37.5rem;
-  height: 83.9rem;
+  background-color: white;
   background: rgb(212, 178, 178);
   display: flex;
   flex-direction: column;
-  margin-left: 350px;
 }
 .upp {
-  width: 37.5rem;
+  overflow: visible;
   height: 11.3rem;
   background-image: url("../assets/graphics/graphics-header.svg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
 
   display: flex;
@@ -108,6 +118,15 @@ html {
   height: 2rem;
 }
 
+footer {
+  height: 11.3rem;
+  width: 100%;
+  background-position: bottom center;
+  background-image: url("../assets/graphics/graphics-footer.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 h1 {
   font-size: 42px;
   margin: 1.5rem;
@@ -116,40 +135,36 @@ h1 {
 .products {
   flex: 1 0 auto;
 
-  width: 31.1rem;
   margin: 1rem;
 }
 .products ul {
-  margin: 0.5rem;
+  padding: 0;
+  margin: 0;
   list-style-type: none;
   text-decoration: none;
 }
 .products li {
-  text-align: start;
+  display: flex;
+  align-items: center;
   font-size: 25px;
-  line-height: 120%;
+  margin-bottom: 28px;
 }
 .add-btn img {
-  width: 1.2rem;
-  height: 1.2rem;
+  display: block;
+  width: 11px;
+  height: 11px;
 }
 .add-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border-color: black;
   background-color: black;
-  margin-right: 450px;
-}
-footer {
-  background-image: url("../assets/graphics/graphics-footer.svg");
-  flex-shrink: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
+  margin: 0;
+  margin-right: 15px;
 }
 
 h1,
@@ -160,25 +175,22 @@ li {
   font-weight: bold;
 }
 .title {
-  margin-left: 70px;
-  margin-top: -35px;
-  padding-bottom: 5px;
   display: flex;
-  font-size: 1.7rem;
+  font-size: 23px;
+  margin: 0 0 0;
+  background: rgb(212, 178, 178);
+  z-index: 1;
 }
 .desc {
-  margin-left: 70px;
-  padding-bottom: 60px;
-  display: flex;
-  font-size: 16px;
+  font-size: 12px;
+  margin: 0;
 }
 .price {
-  display: flex;
-  font-size: 24px;
-  padding-bottom: 5px;
+  font-size: 23px;
   font-display: bold;
-  margin-left: 350px;
-  margin-top: -130px;
-  margin-right: 0;
+  margin: 0 0 0 10px;
+  white-space: nowrap;
+  background: rgb(212, 178, 178);
+  z-index: 1;
 }
 </style>
