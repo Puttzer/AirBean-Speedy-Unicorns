@@ -20,6 +20,10 @@ export default {
   @import url("https://fonts.googleapis.com/css?family=PT+Serif:700|Work+Sans:400,600&display=swap");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   width: 100%;

@@ -71,7 +71,7 @@ export default {
     background: orange;
     font-size: 1.5rem;
     font-weight: 700;
-    z-index: 99;
+    z-index: 1;
     margin-left: 30px;
   }
 }

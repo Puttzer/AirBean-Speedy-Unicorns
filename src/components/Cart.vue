@@ -1,18 +1,18 @@
 <template>
-<div class="cartview">
-  <div class="cart">
-    <h3>Din beställning</h3>
-    <CartItem v-for="(item,index) in cart" v-bind:key="index" v-bind:item="item" />
-    <div class="totalamount">
-      <h3>
-        Total
-        <span class="dots"></span>
-        {{ totalamount }} kr
-      </h3>
-      <p>Inkl moms + drönarleverans</p>
+  <div class="cartview">
+    <div class="cart">
+      <h3>Din beställning</h3>
+      <CartItem v-for="(item,index) in cart" v-bind:key="index" v-bind:item="item" />
+      <div class="totalamount">
+        <h3>
+          Total
+          <span class="dots"></span>
+          {{ totalamount }} kr
+        </h3>
+        <p>Inkl moms + drönarleverans</p>
+      </div>
+      <a href class="button" @click.prevent="makeOrder">Take My Money</a>
     </div>
-    <a href class="button" @click.prevent="makeOrder">Take My Money</a>
-  </div>
   </div>
 </template>
 
@@ -46,21 +46,28 @@ export default {
 
 
 <style lang="scss">
-.cartview{
+.cartview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 400px;
+  margin: 73px 20px 20px;
+  width: calc(100% - 40px);
 }
 .cart {
-  background: white;
-  top: 7rem;
-  right: 1rem;
-  left: 1rem;
-
-  width: 350px;
-  margin: 1rem;
+  width: 100%;
+  background: #fff;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2), 0 0 4rem rgba(0, 0, 0, 0.2);
+  h3 {
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 120%;
+  }
 
   &after {
     content: "";
@@ -83,6 +90,7 @@ export default {
     h3 {
       display: flex;
       margin: 0;
+
       .dots {
         display: flex;
         justify-content: center;
